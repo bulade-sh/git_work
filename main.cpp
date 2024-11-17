@@ -23,13 +23,13 @@ void out(const vector<string> &strings)
         cout << line << endl;
     }
 }
-void writing(const string &fileName, vector<string> &strings)
+void writing(const string &fileName, const vector<string> &strings)
 {
     ofstream fileOut(fileName);
-    //Для проверки добавляю в вектор строки, предварительно стерев const
+    /*//Для проверки добавляю в вектор строки, предварительно стерев const
     strings.push_back("blalala cxcx");
     strings.push_back("lylylyly");
-
+    */
     if (!fileOut.is_open()) {
         cout << "Не удалось открыть файл для записи" << endl;
         return;
