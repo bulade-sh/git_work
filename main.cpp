@@ -17,6 +17,9 @@ void reading(const string &fileName, vector<string> &strings)
         strings.push_back(line);
     }
     file.close();
+    /*for (const string &line : strings) { // проверка вывода на консоль
+        cout << line << endl;
+    }*/
 }
 void out(const vector<string> &strings)
 {
