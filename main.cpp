@@ -25,7 +25,12 @@ void out(const vector<string> &strings)
 }
 void writing(const string &fileName, vector<string> &strings)
 {
+    ofstream fileOut(fileName);
 
+    if (!fileOut.is_open()) {
+        cout << "Не удалось открыть файл для записи" << endl;
+        return;
+    }
 }
 int main() {
     setlocale(LC_ALL, "Russian");
