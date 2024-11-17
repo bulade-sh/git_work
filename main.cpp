@@ -7,7 +7,19 @@ using namespace std;
 
 void reading(const string &fileName, vector<string> &strings)
 {
-
+    ifstream file(fileName);
+    if (!file.is_open()) {
+        wcout << L"Файл не открывается!" << endl;
+        return;
+    }
+    string line;
+    while (getline(file, line)) {
+        strings.push_back(line);
+    }
+    file.close();
+    /*for (const string &line : strings) { // проверка вывода на консоль
+        cout << line << endl;
+    }*/
 }
 void out(const vector<string> &strings)
 {
