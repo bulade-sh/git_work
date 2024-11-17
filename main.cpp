@@ -12,6 +12,11 @@ void reading(const string &fileName, vector<string> &strings)
         wcout << L"Файл не открывается!" << endl;
         return;
     }
+    string line;
+    while (getline(file, line)) {
+        strings.push_back(line);
+    }
+    file.close();
 }
 void out(const vector<string> &strings)
 {
