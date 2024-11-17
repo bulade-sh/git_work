@@ -17,6 +17,10 @@ void out(vector<string> &strings)
     strings.push_back("name - Bulat");
     strings.push_back("surname - Shafikov");
     strings.push_back("age - 19");
+
+    for (const string &line : strings) {
+        cout << line << endl;
+    }
 }
 void writing(const string &fileName, vector<string> &strings)
 {
