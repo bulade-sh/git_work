@@ -9,9 +9,14 @@ void reading(const string &fileName, vector<string> &strings)
 {
 
 }
-void out(const vector<string> &strings)
+// так как мы вручную добавляем в вектор строки,
+// то нужно, чтобы вектор strings был не const.
+// То есть при проверке мы его убираем.
+void out(vector<string> &strings)
 {
-
+    strings.push_back("name - Bulat");
+    strings.push_back("surname - Shafikov");
+    strings.push_back("age - 19");
 }
 void writing(const string &fileName, vector<string> &strings)
 {
